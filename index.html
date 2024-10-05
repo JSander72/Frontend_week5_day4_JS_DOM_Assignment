@@ -1,35 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <title>JavaScript and the Document Object Model DOM
-    </title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+    <title>JavaScript and the Document Object Model DOM</title>
+  </head>
+  <body>
     <div id="container">
-        <h4>Welcome to DOM manipulation</h4>
-        <p id="message" style="font-family: Arial, Helvetica, sans-serif;">Product List</p>
-        <br>
-        <p>Submit name of product for details</p>
-        
+      <h4>Welcome to DOM manipulation</h4>
+      <p id="message" style="font-family: Arial, Helvetica, sans-serif;">
+        Product List
+      </p>
+      <br />
+      <p>Submit name of product for details</p>
+    </div>
+    <form id="myForm" onsubmit="handleSubmit(event)">
+      <input type="text" id="searchBox" placeholder="search list" />
+      <button class="submit" type="submit">Submit</button>
+      <div class="hidden" id="not-hidden">
+        <ul class="myList" id="myList"></ul>
       </div>
-      <form id="myForm" onsubmit="handleSubmit(event)">
-        <input type="text" id="searchBox" placeholder="search list">
-        <button class="submit "="submit">Submit</button>
-        <div class="hidden" id="not-hidden">
-            <ul class="myList" id="myList"></ul>
-        
-        </div>
+    </form>
 
-                 
+    <h2>Contact Form</h2>
 
-      </form>
- 
-
-
+    <form id="myFormTwo">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
 
     <script src="index.js"></script>
-</body>
+    <script src="formTwo.js"></script>
+  </body>
 </html>

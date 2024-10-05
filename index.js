@@ -5,7 +5,7 @@ let products = [
 ];
 
 function displayProducts(products, listElement, showDetails = false) {
-    listElement.innerHTML = 'myList'; 
+    listElement.innerHTML = ''; 
 
     for (const product of products) {
         const li = document.createElement("li");
@@ -25,8 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const list = document.getElementById("myList");
     const searchBox = document.getElementById('searchBox'); 
 
-   
-    displayProducts(products); 
+    displayProducts(products, list); 
 
     if (form) { 
         form.addEventListener("submit", (event) => {
@@ -41,27 +40,14 @@ document.addEventListener("DOMContentLoaded", () => {
         searchBox.addEventListener('input', (event) => {
             const searchTerm = event.target.value.toLowerCase();
 
-            
             const filteredProducts = products.filter(product => 
                 product.name.toLowerCase().includes(searchTerm)
             );
 
-            
             displayProducts(filteredProducts, list, searchTerm !== ''); 
+            list.style.display = "none";
         });
     } else {
         console.error("Search box with ID 'searchBox' not found.");
     }
-
-    document.getElementById("handleSubmit").addEventListener("click", () => {
-        const productName = document.getElementById("productName").value;
-        
-
-        if (productName) {
-            products.push({ name: productName, price: parseFloat(productPrice), description: productDescription });
-            displayProducts(products, list);
-        } else {
-            alert("Please fill out all fields.");
-        }
-    });
 });

@@ -36,5 +36,3 @@ for (let i = 0; i < products.length; i++) {
 ```
 
 This code iterates through the `products` array and logs the name, price, and description of each product to the console.
-
-Thank you for using Smart README Generator! Have a great day!
