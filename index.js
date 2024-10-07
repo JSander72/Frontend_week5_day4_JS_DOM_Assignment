@@ -51,3 +51,37 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("Search box with ID 'searchBox' not found.");
     }
 });
+
+function changeColor() {
+    document.getElementById("box").style.backgroundColor = "red";
+}
+
+const button = document.getElementById('button1');
+
+button.addEventListener('mouseover', function() {
+    this.style.backgroundColor = 'purple';
+});
+
+button.addEventListener('mouseout', function() {
+    this.style.backgroundColor = ''; 
+});
+
+const button2 = document.getElementById('button2');
+
+button2.addEventListener('mouseover', function() {
+    this.style.backgroundColor = 'green';
+});
+
+button2.addEventListener('mouseout', function() {
+    this.style.backgroundColor = ''; 
+});
+
+const button3 = document.getElementById('button3');
+
+button3.addEventListener('mouseover', function() {
+    this.style.backgroundColor = 'blue';
+});
+
+button3.addEventListener('mouseout', function() {
+    this.style.backgroundColor = ''; 
+});

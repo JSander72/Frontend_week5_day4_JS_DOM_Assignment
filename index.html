@@ -25,7 +25,7 @@
 
     <h2>Contact Form</h2>
 
-    <form id="myFormTwo">
+    <form id="myFormTwo" onclick="onClick(event)">
       <div>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required />
@@ -38,8 +38,24 @@
         <label for="message">Message:</label>
         <textarea id="message" name="message" required></textarea>
       </div>
-      <button type="submit">Submit</button>
+      <button id="button" type="submit">Submit</button>
     </form>
+    <br>
+    <button id="box" onclick="changeColor()">Click me to change color
+    </button>
+    <br>
+      <button class="button_1" id="button1" >
+        Button One
+      </button>
+      <br>
+      <button class="button_2" id="button2" >
+        Button Two
+      </button>
+      <br>
+      <button class="button_3" id="button3" >
+        Button Three
+      </button>
+  
 
     <script src="index.js"></script>
     <script src="formTwo.js"></script>
